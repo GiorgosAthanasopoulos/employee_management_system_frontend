@@ -1,0 +1,16 @@
+#navbar-left {
+    display: inline;
+}
+
+#navbar-right {
+    float: right;
+}
+
+#author-github {
+    margin-right: 1vw;
+}
+
+#settings-icon {
+    width: 10px;
+    height: 10px;
+}
