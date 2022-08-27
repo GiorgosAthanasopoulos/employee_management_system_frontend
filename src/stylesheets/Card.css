@@ -1,0 +1,13 @@
+.card {
+    background-color: teal;
+    color: white;
+    width: 400px;
+    height: 250px;
+    text-align: center;
+    margin-right: 50px;
+    margin-top: 25px;
+}
+
+.card h1 {
+    margin-top: 25px;
+}
