@@ -1,4 +1,6 @@
 #employee-list {
     display: flex;
     flex-direction: row;
+    margin-left: 40px;
+    margin-right: 40px;
 }

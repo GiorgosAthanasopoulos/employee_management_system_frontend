@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Card from './Card';
+import {toggleForm} from '../lib/lib';
 
 import '../stylesheets/EmployeeList.css';
 
@@ -15,18 +16,21 @@ function EmployeeList() {
         }
 
         getEmployees().then(data => {
+            toggleForm();
+            
             let cards = [];
-            for(let i=0; i<data.length; i++) {
+            for (let i = 0; i < data.length; i++) {
+                // TODO new line every 3 cards
                 cards.push(
-                        <Card name={data[i]['name']} email={data[i]['email']}
-                        jobPosition={data[i]['jobPosition']} id={data[i]['id']}
-                        imgurl={data[i]['imgurl']} key={i}/>
+                    <Card name={data[i]['name']} email={data[i]['email']}
+                          jobPosition={data[i]['jobPosition']} id={data[i]['id']}
+                          imgurl={data[i]['imgurl']} key={i}/>
                 );
             }
             setCards(cards);
         });
     }, []);
-    
+
     return (
         <div id={'employee-list'}>
             {cards}

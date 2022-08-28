@@ -2,7 +2,7 @@
     background-color: teal;
     color: white;
     width: 400px;
-    height: 350px;
+    height: 360px;
     text-align: center;
 
     margin-right: 50px;
@@ -14,18 +14,22 @@
     height: 100px;
 }
 
-.delete {
-    width: 50px;
-    height: 30px;
+.delete, .update {
+    width: 60px;
+    height: 40px;
     font-size: 20px;
 
     border-radius: 5px 25px;
 }
 
-.delete:hover {
+.delete:hover, .update:hover {
     background-color: black;
     color: white;
 
     width: 55px;
     height: 35px;
+}
+
+.update {
+    margin-left: 5px;
 }

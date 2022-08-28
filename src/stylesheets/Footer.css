@@ -1,0 +1,45 @@
+#footer {
+    position: fixed;
+    padding: 10px 10px 0 10px;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: teal;
+    color: white;
+    text-align: center;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#github-link {
+    color: white;
+}
+
+#github-link:visited {
+    color: white;
+}
+
+#copyright {
+    margin-left: 33vw;
+}
+
+#create-employee {
+    margin-right: 50px;
+    margin-top: 10px;
+
+    width: 110px;
+    height: 70px;
+    font-size: 20px;
+
+    border-radius: 5px 25px;
+}
+
+#create-employee:hover {
+    background-color: black;
+    color: white;
+
+    width: 120px;
+    height: 80px;
+}

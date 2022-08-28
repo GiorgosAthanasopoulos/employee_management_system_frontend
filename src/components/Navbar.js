@@ -6,13 +6,13 @@ function authors_github_clicked() {
 }
 
 function source_code_clicked() {
-    window.open('https://www.github.com/giorgosathanasopoulos/employee_management_system_frontend', '_blank');
+    window.open('https://www.github.com/giorgosathanasopoulos/employee_management_system', '_blank');
 }
 
 function Navbar() {
     return(
         <div id={'navbar'}>
-            <h1 className={'text'}>Employee Management System</h1>
+            <h1>Employee Management System</h1>
 
             <div>
                 <button className={'button-link'} onClick={source_code_clicked}>Source Code</button>

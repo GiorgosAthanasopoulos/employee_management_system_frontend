@@ -1,4 +1,5 @@
 import '../stylesheets/Card.css';
+import {toggleForm} from '../lib/lib';
 
 import React from 'react';
 
@@ -9,7 +10,7 @@ function Card(props) {
         await axios.delete('http://127.0.0.1:8080/api/v1/employee/' + props.id);
         window.location.reload();
     }
-    
+
     return (
         <div className={'card'}>
             <img src={props.imgurl} alt={'employee-profile-icon'}/>
@@ -17,6 +18,7 @@ function Card(props) {
             <h2>{props.email}</h2>
             <h2>{props.jobPosition}</h2>
             <button className={'delete'} onClick={deleteEmployee}>X</button>
+            <button className={'update'} onClick={toggleForm}>🖉</button>
         </div>
     );
 
