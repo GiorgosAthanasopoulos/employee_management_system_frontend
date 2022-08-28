@@ -6,7 +6,7 @@ import '../stylesheets/EmployeeList.css';
 const axios = require('axios');
 
 function EmployeeList() {
-    const [employees, setEmployees] = useState([]);
+    const [cards, setCards] = useState([]);
 
     useEffect(() => {
         async function getEmployees() {
@@ -14,19 +14,18 @@ function EmployeeList() {
             return await response.data;
         }
 
-        getEmployees().then(data => setEmployees(data));
+        getEmployees().then(data => {
+            let cards = [];
+            for(let i=0; i<data.length; i++) {
+                cards.push(
+                        <Card name={data[i]['name']} email={data[i]['email']}
+                        jobPosition={data[i]['jobPosition']} id={data[i]['id']}
+                        imgurl={data[i]['imgurl']} key={i}/>
+                );
+            }
+            setCards(cards);
+        });
     }, []);
-    
-    console.log(employees[0]);
-    let cards = [];
-    for(let i=0; i<employees.length; i++) {
-        let obj = JSON.parse(employees[i]);
-        cards.push(
-            <Card name={obj.name} email={obj.email} 
-            jobPosition={obj.jobPosition} imgurl={obj.imgurl}
-            key={i}/>
-        );
-    }
     
     return (
         <div id={'employee-list'}>
