@@ -1,34 +1,28 @@
 import React from 'react';
-import {toggleForm} from '../lib/lib';
+import {closeForms} from '../lib/lib';
 
 import '../stylesheets/Form.css';
 
 function Form(props) {
-    async function submit() {  
-        toggleForm();
-        // TODO post - put
-        window.location.reload();
-    }
-
     return (
-        <div id={'form'}>
-            <form action={'javascript:;'} onSubmit={submit}>
+        <div id={'form-' + props.id}>
+            <form action={'javascript:;'} onSubmit={props.onSubmit}>
                 <h1>{props.title}</h1>
 
                 <label htmlFor={'name'}><b>Name</b></label>
-                <input type={'text'} placeholder={'Enter name'} name={'name'} required/>
+                <input type={'text'} placeholder={'Enter name'} name={'name'} id={'form-input-name-' + props.id} required/>
                 
                 <label htmlFor={'email'}><b>Email</b></label>
-                <input type={'text'} placeholder={'Enter email'} name={'email'} required/>
+                <input type={'text'} placeholder={'Enter email'} name={'email'} id={'form-input-email-' + props.id} required/>
                 
                 <label htmlFor={'jobPosition'}><b>Job Position</b></label>
-                <input type={'text'} placeholder={'Enter job position'} name={'jobPosition'} required/>
+                <input type={'text'} placeholder={'Enter job position'} name={'jobPosition'} id={'form-input-jobPosition-' + props.id} required/>
                 
                 <label htmlFor={'imgurl'}><b>Image URL</b></label>
-                <input type={'text'} placeholder={'Enter image url'} name={'imgurl'} required/>
+                <input type={'text'} placeholder={'Enter image url'} name={'imgurl'} id={'form-input-imgurl-' + props.id} required/>
                 
                 <button className={'button'} id={'submit'} type={'submit'}>Submit</button>
-                <button className={'button'} id={'cancel'} type={'cancel'} onClick={toggleForm}>Cancel</button>
+                <button className={'button'} id={'cancel'} type={'cancel'} onClick={closeForms}>Cancel</button>
             </form>
         </div>
     );

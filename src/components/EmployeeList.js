@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Card from './Card';
-import {toggleForm} from '../lib/lib';
+import {closeForms} from '../lib/lib';
 
 import '../stylesheets/EmployeeList.css';
 
@@ -15,8 +15,8 @@ function EmployeeList() {
             return await response.data;
         }
 
-        getEmployees().then(data => {
-            toggleForm();
+        getEmployees().then(data => {  
+            closeForms();
             
             let cards = [];
             for (let i = 0; i < data.length; i++) {

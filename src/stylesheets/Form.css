@@ -1,4 +1,4 @@
-#form {
+#form-post, #form-put {
     background-color: teal;
     color: white;
     padding: 15px 20px;
@@ -17,13 +17,13 @@
     z-index: 9;
 }
 
-#form input[type=text] {
+#form-post input[type=text], #form-put input[type=text] {
     border: none;
     padding: 10px;
     margin: 5px 0 10px 0;
 }
 
-#form input[type=text]:focus {
+#form-post input[type=text]:focus, #form-put input[type=text]:focus {
     outline: none;
 }
 
