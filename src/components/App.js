@@ -1,8 +1,9 @@
+import React from 'react';
+
 import Navbar from './Navbar';
 import EmployeeList from './EmployeeList';
 import Footer from './Footer';
 import Form from './Form'
-import React from 'react';
 import {refresh} from '../lib/lib';
 
 const axios = require('axios');
@@ -19,10 +20,6 @@ function App() {
             email: email,
             jobPosition: jobPosition,
             imgurl: imgurl
-        }, {
-            headers: {
-                'content-type': 'application/x-www-form-urlencoded; charset=UTF-8'
-            }
         });
         
         refresh();
@@ -40,7 +37,6 @@ function App() {
                 email: email,
                 jobPosition: jobPosition,
                 imgurl: imgurl,
-                'content-type': 'application/x-www-form-urlencoded; charset=UTF-8'
             }
         });
         

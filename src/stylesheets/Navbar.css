@@ -27,3 +27,15 @@
     width: 110px;
     height: 70px;
 }
+
+#search-bar {
+    padding: 6px;
+    border: none;
+    margin-top: 12px;
+    margin-right: 15px;
+    font-size: 17px;
+}
+
+#search-bar:focus {
+    outline: none;
+}

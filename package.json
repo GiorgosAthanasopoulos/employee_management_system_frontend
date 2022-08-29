@@ -38,5 +38,6 @@
   },
   "devDependencies": {
     "axios": "^0.27.2"
-  }
+  },
+  "main": "giorgosathanasopoulos.github.com.employee_management_system"
 }

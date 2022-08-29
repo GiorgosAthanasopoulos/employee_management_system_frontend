@@ -1,7 +1,8 @@
-import '../stylesheets/Card.css';
+import React from 'react';
 
 import {toggleFormPut, refresh} from '../lib/lib';
-import React from 'react';
+
+import '../stylesheets/Card.css';
 
 const axios = require('axios');
 

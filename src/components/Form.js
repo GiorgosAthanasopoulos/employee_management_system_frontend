@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {closeForms} from '../lib/lib';
 
 import '../stylesheets/Form.css';

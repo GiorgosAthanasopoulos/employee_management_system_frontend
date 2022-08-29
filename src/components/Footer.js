@@ -1,7 +1,8 @@
 import React from 'react';
+
 import {toggleFormPost} from '../lib/lib';
 
-import '../stylesheets/Footer.css'
+import '../stylesheets/Footer.css';
 
 function Footer() {
     return (
