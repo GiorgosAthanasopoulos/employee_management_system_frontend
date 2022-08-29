@@ -7,6 +7,9 @@
 
     margin-right: 50px;
     margin-top: 25px;
+
+
+    flex: 0 30%;
 }
 
 .card img {
